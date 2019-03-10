@@ -1,0 +1,47 @@
+{
+    "segments": {
+        "right": [
+            {
+                "function": "powerline.segments.common.sys.system_load",
+                "after": "",
+                "priority": 50
+            },
+            {
+                "function": "powerline.segments.common.bat.battery",
+                "before": "",
+                "args": {
+                    "format": "{ac_state}{capacity:3.0%}",
+                    "steps": 1
+                }
+            },
+            {
+                "function": "powerline.segments.common.time.date",
+                "name": "time",
+                "before": "",
+                "args": {
+                    "format": "%a",
+                    "istime": true
+                }
+            },
+            {
+                "function": "powerline.segments.common.time.date",
+                "args": {
+                    "istime": true
+                }
+            },
+            {
+                "function": "powerline.segments.common.time.date",
+                "name": "time",
+                "before": "",
+                "args": {
+                    "format": "%H:%M:%S",
+                    "istime": true
+                }
+            },
+            {
+                "function": "powerline.segments.common.net.hostname",
+                "before": ""
+            }
+        ]
+    }
+}

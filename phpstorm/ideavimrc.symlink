@@ -1,0 +1,21 @@
+"--- General Settings ---"
+set ignorecase                   "Ignore case in search patterns"
+set smartcase                    "No ignore case when pattern has uppercase"
+set clipboard=unnamed            "Allow copy to clipboard
+
+
+"--- Search ---"
+set hlsearch
+set incsearch
+
+
+"--- Mappings ---"
+let mapleader = ","              
+
+imap jj <Esc>
+
+nmap <Leader><space> :nohlsearch<cr>
+
+"--- Plugins ---"
+set surround
+

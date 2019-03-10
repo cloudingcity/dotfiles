@@ -1,0 +1,22 @@
+# powerline
+run-shell "powerline-daemon -q"
+source "$HOME/Library/Python/2.7/lib/python/site-packages/powerline/bindings/tmux/powerline.conf"
+
+set-option -g default-terminal "screen-256color"
+
+set -g prefix C-a
+set -g status-interval 1
+set -g mouse on
+set -g base-index 1
+set -sg escape-time 1
+
+# screen
+bind | split-window -h
+bind - split-window -v
+
+# pane movement shortcuts
+bind h select-pane -L
+bind j select-pane -D
+bind k select-pane -U
+bind l select-pane -R
+
