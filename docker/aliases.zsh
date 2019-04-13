@@ -5,4 +5,5 @@ alias dip="docker inspect --format '{{ .NetworkSettings.IPAddress }}'" # Get con
 alias dr="docker run"
 alias drm="docker rm"
 alias drmi="docker rmi"
+alias de="docker exec"
 dalias() { alias | grep 'docker' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
