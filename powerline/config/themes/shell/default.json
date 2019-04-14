@@ -31,8 +31,8 @@
 				"priority": 10
 			},
 			{
-    			        "function": "powerline_gitstatus.gitstatus",
-    			        "priority": 40
+	            "function": "powerline_gitstatus.gitstatus",
+    	        "priority": 40
 			}
 		]
 	}
