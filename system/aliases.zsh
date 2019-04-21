@@ -6,6 +6,7 @@ alias vimconfig='vim ~/.vimrc'
 alias desk='cd ~/Desktop'
 alias vi='vim'
 alias ls='exa'
+alias tmuxgo=$DOTFILES/script/tmuxgo
 
 fssh() {
   local remotes remote
