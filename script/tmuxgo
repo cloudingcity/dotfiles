@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+SESSION=0
+
+tmux -2 new-session -d -s $SESSION
+
+tmux rename-window -t $SESSION:1 main
+tmux new-window -t $SESSION:2 -a -n remote
+tmux new-window -t $SESSION:3 -a -n operation
+tmux new-window -t $SESSION:4 -a -n tool
+tmux new-window -t $SESSION:5 -a -n other
+
+tmux select-window -t $SESSION:1
+tmux -2 a -t $SESSION
+
