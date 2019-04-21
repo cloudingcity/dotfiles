@@ -7,7 +7,7 @@ alias desk='cd ~/Desktop'
 alias vi='vim'
 alias ls='exa'
 
-zssh() {
+fssh() {
   local remotes remote
   remotes=$(cat $DOTFILES/remotes) &&
   remote=$(echo "$remotes" | fzf +m) &&
