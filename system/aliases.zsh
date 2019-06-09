@@ -4,7 +4,6 @@ alias brewup='brew update; brew upgrade; brew prune; brew cleanup; brew doctor'
 alias zshconfig='vim ~/.zshrc'
 alias vimconfig='vim ~/.vimrc'
 alias desk='cd ~/Desktop'
-alias vi='vim'
 alias ls='exa'
 alias tmuxgo=$DOTFILES/script/tmuxgo
 
