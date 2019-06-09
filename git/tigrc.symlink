@@ -1,6 +1,7 @@
 set main-view-date = relative
 set main-view-id   = true
 
-bind main 0 !+@sh -c "printf %(commit) | pbcopy && echo 'commit id copied!'"
-bind main = !git commit --fixup=%(commit)
-bind main + !?@sh -c "git add -A && git commit --fixup=%(commit)"
+bind main 1 !+@sh -c "printf %(commit) | pbcopy && echo 'commit id copied!'"
+bind main 2 !git commit --fixup=%(commit)
+bind main @ !?@sh -c "git add -A && git commit --fixup=%(commit)"
+bind main 3 !git rebase -i %(commit)
