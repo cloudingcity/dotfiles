@@ -6,6 +6,7 @@ alias vimconfig='vim ~/.vimrc'
 alias desk='cd ~/Desktop'
 alias ls='exa'
 alias tmuxgo=$DOTFILES/script/tmuxgo
+alias shrug="echo '¯\_(ツ)_/¯' | pbcopy";
 
 fssh() {
   local remotes remote

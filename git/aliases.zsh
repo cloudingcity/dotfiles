@@ -35,6 +35,7 @@ alias gignore='git update-index --skip-worktree'
 alias gunignore='git update-index --no-skip-worktree'
 alias gignored='git ls-files -v | grep ^S'
 galias() { alias | grep 'git' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
+alias nah="git reset --hard && git clean -df"
 
 fbr() {
   local branches branch
