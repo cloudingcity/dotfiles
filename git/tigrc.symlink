@@ -1,5 +1,7 @@
 set main-view-date = relative
 set main-view-id   = true
+set vertical-split = true
+
 
 bind main 1 !+@sh -c "printf %(commit) | pbcopy && echo 'commit id copied!'"
 bind main 2 !git commit --fixup=%(commit)
