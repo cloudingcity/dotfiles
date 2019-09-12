@@ -14,3 +14,12 @@ fssh() {
   remote=$(echo "$remotes" | fzf +m) &&
   ssh "$remote" -t zsh
 }
+
+t() {
+    PHPUNIT="vendor/bin/phpunit"
+    if [ -f $PHPUNIT ]; then
+        $PHPUNIT
+    else
+        go test $@
+    fi
+}
