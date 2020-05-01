@@ -24,3 +24,7 @@ t() {
         go test $@
     fi
 }
+
+whoseport () {
+     lsof -i ":$1" | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} LISTEN
+}
