@@ -19,5 +19,7 @@ Plug 'pangloss/vim-javascript'
 
 Plug 'airblade/vim-gitgutter'
 
+Plug 'hashivim/vim-terraform'
+
 call plug#end()
 
