@@ -1,10 +1,10 @@
-<scheme name="Gruvbox Dark Go" version="142" parent_scheme="Default">
+<scheme name="Gruvbox Dark Go" version="142" parent_scheme="IntelliJ Light">
   <metaInfo>
-    <property name="created">2019-09-01T19:33:08</property>
+    <property name="created">2020-06-17T12:03:19</property>
     <property name="ide">GoLand</property>
-    <property name="ideVersion">2019.2.1.0.0</property>
-    <property name="modified">2019-09-01T19:33:17</property>
-    <property name="originalScheme">Gruvbox Dark</property>
+    <property name="ideVersion">2020.1.3.0.0</property>
+    <property name="modified">2020-06-17T12:03:26</property>
+    <property name="originalScheme">Gruvbox Dark Go</property>
   </metaInfo>
   <colors>
     <option name="ADDED_LINES_COLOR" value="79740e" />
@@ -15,7 +15,7 @@
     <option name="FILESTATUS_ADDED" value="629755" />
     <option name="FILESTATUS_DELETED" value="6c6c6c" />
     <option name="FILESTATUS_IDEA_FILESTATUS_DELETED_FROM_FILE_SYSTEM" value="6c6c6c" />
-    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="848504" />
+    <option name="FILESTATUS_IDEA_FILESTATUS_IGNORED" value="6c6c6c" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_BOTH_CONFLICTS" value="d5756c" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_CONFLICTS" value="d5756c" />
     <option name="FILESTATUS_IDEA_FILESTATUS_MERGED_WITH_PROPERTY_CONFLICTS" value="d5756c" />
@@ -37,7 +37,6 @@
     <option name="SELECTED_INDENT_GUIDE" value="f8e1aa" />
     <option name="SELECTED_TEARLINE_COLOR" value="8ec07c" />
     <option name="SELECTION_BACKGROUND" value="665c54" />
-    <option name="SELECTION_FOREGROUND" value="" />
     <option name="TEARLINE_COLOR" value="665c54" />
     <option name="WHITESPACES" value="505050" />
   </colors>
@@ -575,8 +574,6 @@
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
-    <option name="GHERKIN_PYSTRING" baseAttributes="" />
-    <option name="GHERKIN_REGEXP_PARAMETER" baseAttributes="" />
     <option name="GO_BUILTIN_CONSTANT" baseAttributes="DEFAULT_CONSTANT" />
     <option name="GO_BUILTIN_FUNCTION_CALL" baseAttributes="DEFAULT_FUNCTION_CALL" />
     <option name="GO_BUILTIN_TYPE_REFERENCE" baseAttributes="DEFAULT_CLASS_REFERENCE" />
@@ -731,7 +728,6 @@
         <option name="FOREGROUND" value="fabd2f" />
       </value>
     </option>
-    <option name="List/map to object conversion" baseAttributes="" />
     <option name="MATCHED_BRACE_ATTRIBUTES">
       <value>
         <option name="FOREGROUND" value="ff8647" />
