@@ -17,3 +17,5 @@
         default = current
 [rebase]
         autosquash = true
+[pull]
+	ff = only
