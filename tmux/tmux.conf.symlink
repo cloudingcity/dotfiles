@@ -9,6 +9,7 @@ set -g status-interval 1
 set -g mouse on
 set -g base-index 1
 set -sg escape-time 1
+set-window-option -g window-status-separator ''
 
 # screen
 bind | split-window -h
