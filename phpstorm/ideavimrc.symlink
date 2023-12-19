@@ -18,4 +18,5 @@ nmap <Leader><space> :nohlsearch<cr>
 
 "--- Plugins ---"
 set surround
+set sneak
 set keep-english-in-normal
