@@ -21,5 +21,7 @@ Plug 'airblade/vim-gitgutter'
 
 Plug 'hashivim/vim-terraform'
 
+Plug 'justinmk/vim-sneak'
+
 call plug#end()
 
