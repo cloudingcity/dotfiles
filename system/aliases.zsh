@@ -14,15 +14,6 @@ fssh() {
   ssh "$remote" -t zsh
 }
 
-t() {
-    PHPUNIT="vendor/bin/phpunit"
-    if [ -f $PHPUNIT ]; then
-        $PHPUNIT
-    else
-        go test $@
-    fi
-}
-
 whoseport () {
      lsof -i ":$1" | grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn} LISTEN
 }
