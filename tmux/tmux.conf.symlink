@@ -1,6 +1,6 @@
 # powerline
-run-shell "powerline-daemon -q"
-source "$HOME/Library/Python/3.9/lib/python/site-packages/powerline/bindings/tmux/powerline.conf"
+# run-shell "powerline-daemon -q"
+# source "$HOME/Library/Python/3.9/lib/python/site-packages/powerline/bindings/tmux/powerline.conf"
 
 set-option -g default-terminal "screen-256color"
 
