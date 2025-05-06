@@ -20,3 +20,23 @@ bind h select-pane -L
 bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
+
+# TPM plugins
+set -g @plugin 'tmux-plugins/tpm' # mandatory
+set -g @plugin 'tmux-plugins/tmux-sensible' # optional recommended
+
+set -g @plugin 'cloudingcity/tmux-gruvbox'
+set -g @tmux-gruvbox 'dark' # or 'dark256', 'light', 'light256'
+set -g @tmux-gruvbox-right-status-y '%H:%M:%S | %a'
+set -g @tmux-gruvbox-right-status-z '#{battery_icon_status}#{battery_percentage} #{tmux_mode_indicator}'
+
+set -g @plugin 'tmux-plugins/tmux-battery'
+set -g @batt_icon_status_charged '🔋'
+set -g @batt_icon_status_charging '⚡'
+set -g @batt_icon_status_discharging '🪫'
+set -g @batt_icon_status_attached '🚫'
+
+set -g @plugin 'MunifTanjim/tmux-mode-indicator'
+ 
+# Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+run '~/.tmux/plugins/tpm/tpm'
