@@ -31,7 +31,7 @@ set -g @tmux-gruvbox-right-status-y "%H:%M:%S \uE0B3 %a"
 set -g @tmux-gruvbox-right-status-z '#{battery_icon} #{battery_percentage} #{tmux_mode_indicator}'
 
 set -g @plugin 'tmux-plugins/tmux-battery'
-set -g @batt_icon_charge_tier8 '󰂂'
+set -g @batt_icon_charge_tier8 '󰁹'
 set -g @batt_icon_charge_tier7 '󰂁'
 set -g @batt_icon_charge_tier6 '󰂀'
 set -g @batt_icon_charge_tier5 '󰁾'
