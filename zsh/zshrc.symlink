@@ -62,4 +62,4 @@ fi
 export GOLANG_PROTOBUF_REGISTRATION_CONFLICT=warn
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+#[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
