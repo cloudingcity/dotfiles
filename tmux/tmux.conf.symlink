@@ -27,7 +27,7 @@ set -g @plugin 'tmux-plugins/tmux-sensible' # optional recommended
 
 set -g @plugin 'cloudingcity/tmux-gruvbox'
 set -g @tmux-gruvbox 'dark' # or 'dark256', 'light', 'light256'
-set -g @tmux-gruvbox-right-status-y "%H:%M:%S \uE0B3 %a"
+set -g @tmux-gruvbox-right-status-y "%H:%M:%S  %a"
 set -g @tmux-gruvbox-right-status-z '#{battery_icon} #{battery_percentage} #{tmux_mode_indicator}'
 
 set -g @plugin 'tmux-plugins/tmux-battery'
