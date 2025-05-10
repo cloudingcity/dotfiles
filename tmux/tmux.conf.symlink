@@ -27,14 +27,22 @@ set -g @plugin 'tmux-plugins/tmux-sensible' # optional recommended
 
 set -g @plugin 'cloudingcity/tmux-gruvbox'
 set -g @tmux-gruvbox 'dark' # or 'dark256', 'light', 'light256'
-set -g @tmux-gruvbox-right-status-y '%H:%M:%S | %a'
-set -g @tmux-gruvbox-right-status-z '#{battery_icon_status}#{battery_percentage} #{tmux_mode_indicator}'
+set -g @tmux-gruvbox-right-status-y "%H:%M:%S \uE0B3 %a"
+set -g @tmux-gruvbox-right-status-z '#{battery_icon} #{battery_percentage} #{tmux_mode_indicator}'
 
 set -g @plugin 'tmux-plugins/tmux-battery'
-set -g @batt_icon_status_charged '🔋'
-set -g @batt_icon_status_charging '⚡'
-set -g @batt_icon_status_discharging '🪫'
-set -g @batt_icon_status_attached '🚫'
+set -g @batt_icon_charge_tier8 '󰂂'
+set -g @batt_icon_charge_tier7 '󰂁'
+set -g @batt_icon_charge_tier6 '󰂀'
+set -g @batt_icon_charge_tier5 '󰁾'
+set -g @batt_icon_charge_tier4 '󰁽'
+set -g @batt_icon_charge_tier3 '󰁼'
+set -g @batt_icon_charge_tier2 '󰁺'
+set -g @batt_icon_charge_tier1 '󰂎'
+set -g @batt_icon_status_charged '󰁹'
+set -g @batt_icon_status_charging '󰂄'
+set -g @batt_icon_status_discharging "󰂄"
+set -g @batt_icon_status_attached '󱟩'
 
 set -g @plugin 'MunifTanjim/tmux-mode-indicator'
  
