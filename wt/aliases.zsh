@@ -1,0 +1,1 @@
+alias wsg='wt switch --create --execute=gemini'

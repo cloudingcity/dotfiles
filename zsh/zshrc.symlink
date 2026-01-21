@@ -63,3 +63,12 @@ export GOLANG_PROTOBUF_REGISTRATION_CONFLICT=warn
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 #[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+if command -v wt >/dev/null 2>&1; then eval "$(command wt config shell init zsh)"; fi
+
+# bun completions
+[ -s "/Users/shawnpeng/.bun/_bun" ] && source "/Users/shawnpeng/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
