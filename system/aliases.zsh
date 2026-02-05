@@ -3,6 +3,7 @@ alias zshconfig='vim ~/.zshrc'
 alias vimconfig='vim ~/.vimrc'
 alias desk='cd ~/Desktop'
 alias ls='eza'
+alias l='ls -lah'
 alias cat='bat'
 alias tmuxgo=$DOTFILES/script/tmuxgo
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy";
