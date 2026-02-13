@@ -1,1 +1,1 @@
-alias wsg='wt switch --create --execute=gemini'
+alias wtg='wt switch --create --execute=gemini'
