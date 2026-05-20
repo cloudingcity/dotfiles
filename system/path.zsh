@@ -1,4 +1,4 @@
-export PATH=$HOME/bin:/usr/local/sbin:/opt/homebrew/bin:$PATH
+export PATH=$HOME/bin:/usr/local/sbin:/opt/homebrew/bin:$HOME/.local/bin:$PATH
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export EDITOR=vim
