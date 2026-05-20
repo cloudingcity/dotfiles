@@ -23,5 +23,7 @@ Plug 'hashivim/vim-terraform'
 
 Plug 'justinmk/vim-sneak'
 
+Plug 'tpope/vim-commentary'
+
 call plug#end()
 

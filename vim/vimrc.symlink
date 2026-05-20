@@ -21,6 +21,7 @@ set smartcase                    "No ignore case when pattern has uppercase"
 set backspace=2                  "Make backspace behave like every other editor.
 set clipboard=unnamed            "Allow copy to clipboard
 set ttimeoutlen=50
+set background=dark
 
 
 "--- Visuals ---"
