@@ -1,2 +1,2 @@
-export PATH=$PATH:$(/opt/homebrew/bin/go env GOPATH)/bin
-export GOPATH=$(/opt/homebrew/bin/go env GOPATH)
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
