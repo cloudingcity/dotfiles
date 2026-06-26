@@ -14,4 +14,9 @@ if ! command -v brew >/dev/null 2>&1; then
   fi
 fi
 
+if command -v brew >/dev/null 2>&1; then
+  echo "  Installing Homebrew dependencies..."
+  brew bundle --file="$DOTFILES_ROOT/homebrew/Brewfile"
+fi
+
 exit 0

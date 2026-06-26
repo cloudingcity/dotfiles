@@ -1,0 +1,12 @@
+# Brewfile
+tap "homebrew/bundle"
+
+brew "bat"
+brew "eza"
+brew "fzf"
+brew "zoxide"
+brew "mise"
+brew "antidote"
+brew "git"
+brew "gh"
+brew "tig"
