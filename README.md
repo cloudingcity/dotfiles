@@ -20,10 +20,10 @@ vim gitconfig.local.symlink
 
 Bootstrap dotifles, git config, poweline config:
 ```sh
-script/bootstrap
+./scripts/bootstrap
 ```
 
 Install all of `install.sh`:
 ```sh
-script/install
+./scripts/install
 ```
