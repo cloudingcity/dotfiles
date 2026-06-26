@@ -8,7 +8,6 @@ alias ..='cd ..'
 alias md='mkdir -p'
 alias rd=rmdir
 alias cat='bat'
-alias tmuxgo=$DOTFILES/script/tmuxgo
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy";
 
 fssh() {
