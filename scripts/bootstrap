@@ -138,7 +138,7 @@ install_dotfiles () {
 }
 
 link_ghostty_config () {
-  if [ ! -d ~/.config/powerline ]; then
+  if [ ! -d ~/.config/ghostty ]; then
     link_file $DOTFILES_ROOT/ghostty/config ~/.config/ghostty
   else
     success "skipped $DOTFILES_ROOT/ghostty/config"
