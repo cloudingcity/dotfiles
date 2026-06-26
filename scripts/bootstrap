@@ -137,8 +137,17 @@ install_dotfiles () {
   done
 }
 
+link_ghostty_config () {
+  if [ ! -d ~/.config/powerline ]; then
+    link_file $DOTFILES_ROOT/ghostty/config ~/.config/ghostty
+  else
+    success "skipped $DOTFILES_ROOT/ghostty/config"
+  fi
+}
+
 setup_gitconfig
 install_dotfiles
+link_ghostty_config
 
 echo ''
 echo '  All installed!'

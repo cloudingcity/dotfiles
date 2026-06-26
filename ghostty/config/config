@@ -1,0 +1,12 @@
+font-family = Operator Mono
+font-size = 18
+
+sidebar-font-size = 16
+surface-tab-bar-font-size = 20
+
+scrollback-limit = 50000000
+
+cursor-style = block
+shell-integration-features = no-cursor
+
+unfocused-split-opacity = 0.85
