@@ -139,7 +139,6 @@ install_dotfiles () {
 
 setup_gitconfig
 install_dotfiles
-link_powerline_config
 
 echo ''
 echo '  All installed!'
