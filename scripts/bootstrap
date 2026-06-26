@@ -137,14 +137,6 @@ install_dotfiles () {
   done
 }
 
-link_powerline_config () {
-  if [ ! -d ~/.config/powerline ]; then
-    link_file $DOTFILES_ROOT/powerline/config ~/.config/powerline
-  else
-    success "skipped $DOTFILES_ROOT/powerline/config"
-  fi
-}
-
 setup_gitconfig
 install_dotfiles
 link_powerline_config
