@@ -73,7 +73,7 @@ link_file () {
 
         user "File already exists: $dst ($(basename "$src")), what do you want to do?\n\
         [s]kip, [S]kip all, [o]verwrite, [O]verwrite all, [b]ackup, [B]ackup all?"
-        read -n 1 action
+        read -n 1 action < /dev/tty
 
         case "$action" in
           o )
@@ -130,36 +130,63 @@ install_dotfiles () {
 
   local overwrite_all=false backup_all=false skip_all=false
 
+  # 1. Link all *.symlink files and directories (classic Holman style)
+  # Suitable for simple top-level configuration files (e.g. .gitconfig)
   for src in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -name '*.symlink' -not -path '*.git*')
   do
     dst="$HOME/.$(basename "${src%.*}")"
     link_file "$src" "$dst"
   done
-}
 
-link_ghostty_config () {
-  mkdir -p ~/.config/ghostty
-  local overwrite_all=false backup_all=false skip_all=false
-  link_file $DOTFILES_ROOT/ghostty/config/config ~/.config/ghostty/config
-}
+  # 2. Link all XDG config settings (format: <topic>/config/...)
+  # Any files and directories under <topic>/config/ are linked to ~/.config/<topic>/...
+  # E.g.
+  #   - ghostty/config/config -> ~/.config/ghostty/config
+  #   - bat/config/themes/gruvbox... -> ~/.config/bat/themes/gruvbox...
+  for config_dir in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -type d -name 'config' -not -path '*.git*')
+  do
+    # Get the topic name (the parent directory of the config folder, e.g. ghostty or bat)
+    local topic=$(basename "$(dirname "$config_dir")")
+    
+    # Recursively find and link all files under the config directory
+    # Process substitution is used to prevent subshell isolation from discarding variable updates (e.g. overwrite_all)
+    while read -r src; do
+      # Calculate the path relative to <topic>/config/
+      local rel_path="${src#$config_dir/}"
+      local dst="$HOME/.config/$topic/$rel_path"
+      
+      # Ensure the parent directory of target exists
+      mkdir -p "$(dirname "$dst")"
+      link_file "$src" "$dst"
+    done < <(find "$config_dir" -type f)
+  done
 
-link_bat_theme () {
-  mkdir -p ~/.config/bat/themes
-  local overwrite_all=false backup_all=false skip_all=false
-  link_file $DOTFILES_ROOT/bat/config/themes/gruvbox-dark-medium.tmTheme ~/.config/bat/themes/gruvbox-dark-medium.tmTheme
-}
-
-link_hammerspoon_lua () {
-  mkdir -p ~/.hammerspoon
-  local overwrite_all=false backup_all=false skip_all=false
-  link_file $DOTFILES_ROOT/hammerspoon/init.lua ~/.hammerspoon/init.lua
+  # 3. Link all home dot folder configurations (format: <topic>/dot/...)
+  # Any files and directories under <topic>/dot/ are linked to ~/.<topic>/...
+  # E.g.
+  #   - hammerspoon/dot/init.lua -> ~/.hammerspoon/init.lua
+  for dot_dir in $(find -H "$DOTFILES_ROOT" -maxdepth 2 -type d -name 'dot' -not -path '*.git*')
+  do
+    # Get the topic name (the parent directory of the dot folder, e.g. hammerspoon)
+    local topic=$(basename "$(dirname "$dot_dir")")
+    
+    # Recursively find and link all files under the dot directory
+    # Process substitution is used to prevent subshell isolation from discarding variable updates (e.g. overwrite_all)
+    while read -r src; do
+      # Calculate the path relative to <topic>/dot/
+      local rel_path="${src#$dot_dir/}"
+      local dst="$HOME/.$topic/$rel_path"
+      
+      # Ensure the parent directory of target exists
+      mkdir -p "$(dirname "$dst")"
+      link_file "$src" "$dst"
+    done < <(find "$dot_dir" -type f)
+  done
 }
 
 setup_gitconfig
 install_dotfiles
-link_ghostty_config
-link_bat_theme
-link_hammerspoon_lua
 
 echo ''
 echo '  All installed!'
+
