@@ -22,6 +22,6 @@
 [init]
 	defaultBranch = main
 [commit]
-    gpgsign = true
+        gpgsign = true
 [gpg]
-    format = ssh
+        format = ssh
