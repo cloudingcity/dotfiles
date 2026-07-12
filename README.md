@@ -28,12 +28,12 @@ export GITHUB_TOKEN="your_personal_access_token"
 export DB_PASSWORD="secret_password"
 ```
 
-Bootstrap dotifles, git config, poweline config:
+Bootstrap dotfiles, git config:
 ```sh
-./scripts/bootstrap
+make bootstrap
 ```
 
 Install all of `install.sh`:
 ```sh
-./scripts/install
+make install
 ```
