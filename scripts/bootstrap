@@ -145,9 +145,16 @@ link_ghostty_config () {
   fi
 }
 
+link_hammerspoon_lua () {
+  mkdir -p ~/.hammerspoon
+  local overwrite_all=false backup_all=false skip_all=false
+  link_file $DOTFILES_ROOT/hammerspoon/init.lua ~/.hammerspoon/init.lua
+}
+
 setup_gitconfig
 install_dotfiles
 link_ghostty_config
+link_hammerspoon_lua
 
 echo ''
 echo '  All installed!'
