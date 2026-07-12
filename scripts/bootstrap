@@ -138,11 +138,9 @@ install_dotfiles () {
 }
 
 link_ghostty_config () {
-  if [ ! -d ~/.config/ghostty ]; then
-    link_file $DOTFILES_ROOT/ghostty/config ~/.config/ghostty
-  else
-    success "skipped $DOTFILES_ROOT/ghostty/config"
-  fi
+  mkdir -p ~/.config/ghostty
+  local overwrite_all=false backup_all=false skip_all=false
+  link_file $DOTFILES_ROOT/ghostty/config/config ~/.config/ghostty/config
 }
 
 link_hammerspoon_lua () {
