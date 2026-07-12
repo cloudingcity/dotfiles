@@ -143,6 +143,12 @@ link_ghostty_config () {
   link_file $DOTFILES_ROOT/ghostty/config/config ~/.config/ghostty/config
 }
 
+link_bat_theme () {
+  mkdir -p ~/.config/bat/themes
+  local overwrite_all=false backup_all=false skip_all=false
+  link_file $DOTFILES_ROOT/bat/config/themes/gruvbox-dark-medium.tmTheme ~/.config/bat/themes/gruvbox-dark-medium.tmTheme
+}
+
 link_hammerspoon_lua () {
   mkdir -p ~/.hammerspoon
   local overwrite_all=false backup_all=false skip_all=false
@@ -152,6 +158,7 @@ link_hammerspoon_lua () {
 setup_gitconfig
 install_dotfiles
 link_ghostty_config
+link_bat_theme
 link_hammerspoon_lua
 
 echo ''
