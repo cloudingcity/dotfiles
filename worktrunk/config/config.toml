@@ -1,0 +1,11 @@
+[commit.generation]
+command = "agy --model gemini-3.5-flash --effort low"
+template-append = """
+- Use conventional commits format: feat:, fix:, docs:, style:, refactor:, test:, chore:, etc.
+- Format: <type>(<optional scope>): <short description>
+- Example: feat(auth): add OAuth2 login support
+- Keep the subject line under 72 characters
+"""
+
+[post-commit]
+play_sound = "afplay /System/Library/Sounds/Blow.aiff -t 1"
