@@ -18,7 +18,7 @@
 [rebase]
         autosquash = true
 [pull]
-	ff = only
+	rebase = true
 [init]
 	defaultBranch = main
 [commit]
@@ -32,3 +32,5 @@
 	pruneTags = true
 [branch]
 	sort = -committerdate
+[diff]
+	algorithm = histogram
