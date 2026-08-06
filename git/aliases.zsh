@@ -31,12 +31,9 @@ alias gp='git push'
 alias gpl='git pull'
 alias gf='git fetch'
 alias gfa='git fetch --all'
-alias gignore='git update-index --skip-worktree'
-alias gunignore='git update-index --no-skip-worktree'
-alias gignored='git ls-files -v | grep ^S'
+alias gnew='git log origin/HEAD..HEAD --oneline'
 galias() { alias | grep 'git' | sed "s/^\([^=]*\)=\(.*\)/\1 => \2/"| sed "s/['|\']//g" | sort; }
 alias nah="git reset --hard && git clean -df"
-gclean() { git branch --merged | egrep -v "(\\*|master|staging|testing)" | xargs git branch -d }
 
 fbr() {
   local branches branch
