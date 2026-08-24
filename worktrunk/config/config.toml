@@ -1,5 +1,5 @@
 [commit.generation]
-command = "MAX_THINKING_TOKENS=0 claude -p --no-session-persistence --model=gemini-3.7-flash --tools='' --safe-mode --setting-sources='user' --system-prompt='' --effort low"
+command = "MAX_THINKING_TOKENS=0 claude -p --no-session-persistence --model=gemini-3.7-flash --tools='' --safe-mode --setting-sources='user' --system-prompt='' --effort low --settings ~/.claude/settings-litellm.json"
 template-append = """
 - Use conventional commits format: feat:, fix:, docs:, style:, refactor:, test:, chore:, etc.
 - Format: <type>(<optional scope>): <short description>
