@@ -10,3 +10,5 @@ cursor-style = block
 shell-integration-features = no-cursor
 
 unfocused-split-opacity = 0.85
+
+bold-color = #feffff
