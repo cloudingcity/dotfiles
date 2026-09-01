@@ -9,3 +9,6 @@ template-append = """
 
 [post-commit]
 play_sound = "afplay /System/Library/Sounds/Blow.aiff -t 1"
+
+[list]
+json-schema = 2
