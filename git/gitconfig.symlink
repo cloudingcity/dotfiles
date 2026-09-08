@@ -34,3 +34,5 @@
 	sort = -committerdate
 [diff]
 	algorithm = histogram
+[alias]
+	bye = "!f() { DEFAULT=$(git symbolic-ref refs/remotes/origin/HEAD --short 2>/dev/null | sed \"s@origin/@@\" || git remote show origin 2>/dev/null | sed -n \"/HEAD branch/s/.*: //p\" || echo \"main\"); git checkout \"$DEFAULT\" && git pull && git branch -D @{-1}; }; f"
