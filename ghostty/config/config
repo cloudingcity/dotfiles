@@ -1,14 +1,24 @@
-font-family = Operator Mono
-font-size = 18
-
-sidebar-font-size = 16
-surface-tab-bar-font-size = 20
-
+# ==========================================
+# 1. Terminal Behavior & Buffer
+# ==========================================
 scrollback-limit = 50000000
-
 cursor-style = block
 shell-integration-features = no-cursor
 
-unfocused-split-opacity = 0.85
+# ==========================================
+# 2. Typography & UI Sizing
+# ==========================================
+font-family = "Operator Mono"
+font-size = 18
+sidebar-font-size = 16
+surface-tab-bar-font-size = 20
+
+# ==========================================
+# 3. Colors & Theme
+# ==========================================
+# cmux themes start
+theme = light:Gruvbox Material Dark,dark:Gruvbox Material Dark
+# cmux themes end
 
 bold-color = #feffff
+unfocused-split-opacity = 0.85
