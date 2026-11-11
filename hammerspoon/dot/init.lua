@@ -1,8 +1,8 @@
 hs.hotkey.bind({}, "`", function()
-  local app = hs.application.get("cmux")
+  local app = hs.application.get("Herdr")
   if app and app:isFrontmost() then
     app:hide()
   else
-    hs.application.launchOrFocus("cmux")
+    hs.application.launchOrFocus("Herdr")
   end
 end)
